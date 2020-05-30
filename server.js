@@ -13,7 +13,7 @@ db.sequelize.sync({ force: true }).then(() => {
   initial();
 });
 
-require("./app/route/customer.route.js")(app);
+require("./routes/customer.router")(app);
 
 // Create a Server
 var server = app.listen(process.env.PORT || 5000, function () {
