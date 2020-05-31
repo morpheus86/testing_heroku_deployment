@@ -7,7 +7,8 @@ const sequelize = new Sequelize(env.database, env.username, env.password, {
   operatorsAliases: false,
   ssl: env.ssl,
   dialectOptions: {
-    ssl: { require: true },
+    ssl: { require: true, rejectUnauthorized: false },
+    keepAlive: true,
   },
   pool: {
     max: env.max,
