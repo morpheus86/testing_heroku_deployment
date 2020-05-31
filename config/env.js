@@ -1,8 +1,8 @@
 const env = {
-  database: "d8e793itnasopn",
-  username: "lhlsnoniavodbs",
-  password: "288f7353001cd6aae0817afafcc224ef2b147acbf6ed8d849f7c18cb10e0d799",
-  host: "ec2-18-209-187-54.compute-1.amazonaws.com",
+  database: process.env.DATABASE,
+  username: process.env.USERNAME,
+  password: process.env.PASSWORD,
+  host: process.env.HOST,
   port: 5432,
   dialect: "postgres",
   ssl: true,
