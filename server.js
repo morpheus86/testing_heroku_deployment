@@ -4,7 +4,7 @@ var bodyParser = require("body-parser");
 app.use(bodyParser.json());
 
 const db = require("./config/db.config");
-
+const dotenv = require("dotenv").config();
 const Customer = db.customers;
 // force: true will drop the table if it already exists
 db.sequelize.sync({ force: true }).then(() => {
